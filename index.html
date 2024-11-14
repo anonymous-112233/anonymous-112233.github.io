@@ -8,14 +8,13 @@ layout: home-page
   {% include remove_double_slash.html %}
   <li>
     <div class="post-card">
-      <a href="{{ post_url }}" title="{{ post.title }}" class="post-card-image" style="background: url('{{ relativebase }}assets/img/{{ post.img }}') center no-repeat; background-size: cover;">
-      </a>
       <div class="post-card-body">
         <p class="post-card-title-and-meta">
-          
+          <!-- 文章标题链接 -->
           <a href="{{ post_url }}" class="post-card-link">
-          {{ post.title }}
+            {{ post.title }}
           </a>
+          <!-- 文章的元数据 (如日期、作者等)，这里通过 'post_meta.html' 来显示 -->
           {% include post_meta.html type="post-card-meta" date="none" %}
         </p>
       </div>
